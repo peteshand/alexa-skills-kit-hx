@@ -1,3 +1,17 @@
+// =================================================================================================
+//
+//	Alexa Haxe SDK
+//
+//	This program is free software. You can redistribute and/or modify it
+//	in accordance with the terms of the accompanying license agreement.
+//
+// =================================================================================================
+
+/**
+ * ...
+ * @author P.J.Shand
+ */
+
 package alexa;
 import alexa.actions.Actions;
 import alexa.amazon.AmazonConnection;
@@ -7,10 +21,6 @@ import alexa.tasks.Task;
 import alexa.tasks.Tasks;
 import js.node.Buffer;
 
-/**
- * ...
- * @author P.J.Shand
- */
 class Alexa
 {
 	static private var amazonConnection:AmazonConnection;

@@ -1,0 +1,13 @@
+{
+	"name": "alexa",
+	"url": "https://github.com/peteshand/alexa-skills-kit-hx",
+	"license": "BSD",
+	"tags": [ "amazon", "alexa", "node", "web" ],
+	"description": "Library that interfaces with Amazon Alexa cloud service",
+	"version": "0.0.1",
+	"releasenote": "initial commit",
+	"contributors": [ "p.j.shand" ],
+	"dependencies": {
+		
+	}
+}
