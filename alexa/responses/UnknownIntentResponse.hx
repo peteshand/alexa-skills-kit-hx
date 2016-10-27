@@ -1,7 +1,7 @@
 package alexa.responses;
 
-import alexa.payload.intent.Intent;
-import alexa.payload.response.ResponsePayload;
+import alexa.payloads.response.ResponsePayload;
+import alexa.payloads.Payloads.Intent;
 
 /**
  * ...

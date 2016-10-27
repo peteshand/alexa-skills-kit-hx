@@ -13,8 +13,9 @@
  */
 
 package alexa;
-import alexa.actions.Actions;
-import alexa.amazon.AmazonConnection;
+
+import alexa.connection.IConnection;
+import alexa.connection.NodeConnection;
 import alexa.process.IProcess;
 import alexa.process.Processes;
 import alexa.tasks.Task;
@@ -23,25 +24,23 @@ import js.node.Buffer;
 
 class Alexa
 {
-	static private var amazonConnection:AmazonConnection;
+	static private var connection:IConnection;
 	static private var tasks:Tasks;
 	static private var processes:Processes;
 	
 	public static function __init__():Void
 	{
-		amazonConnection = new AmazonConnection();
-		amazonConnection.eventEmitter.addListener(Actions.ECHO_MESSAGE, OnAlexaRequest);
-		
 		tasks = new Tasks();
 		processes = new Processes();
 		
+		connection = new NodeConnection(OnAlexaRequest);
 	}
 	
 	public function new() { }
 	
 	static public function connect(key:Buffer, cert:Buffer) 
 	{
-		amazonConnection.connect(key, cert);
+		connection.connect(key, cert);
 	}
 	
 	static public function addProcess(intent:String, process:IProcess) 

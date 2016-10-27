@@ -1,7 +1,7 @@
-package alexa.payload.response;
+package alexa.payloads.response;
 
-import alexa.payload.response.response.Response;
-import alexa.payload.response.sessionAttributes.SessionAttributes;
+import alexa.payloads.response.response.Response;
+import alexa.payloads.response.sessionAttributes.SessionAttributes;
 
 /**
  * ...

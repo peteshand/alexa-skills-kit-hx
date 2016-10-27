@@ -1,8 +1,8 @@
-package alexa.payload.response.response;
+package alexa.payloads.response.response;
 
-import alexa.payload.response.response.card.Card;
-import alexa.payload.response.response.outputSpeech.OutputSpeech;
-import alexa.payload.response.response.reprompt.Reprompt;
+import alexa.payloads.response.response.card.Card;
+import alexa.payloads.response.response.outputSpeech.OutputSpeech;
+import alexa.payloads.response.response.reprompt.Reprompt;
 
 /**
  * ...
@@ -17,3 +17,4 @@ class Response
 	
 	public function new() { }
 }
+

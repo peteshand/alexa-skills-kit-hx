@@ -4,31 +4,56 @@ package alexa.payloads;
  * ...
  * @author P.J.Shand
  */
-class Payloads
+
+ typedef IncomingPayload =
 {
-	public function new() { }
+	request:AlexaRequest,
+	session:AlexaSession,
+	version:String
+	
 }
 
-typedef MessageObject =
+typedef Intent =
 {
-	action:String,
-	payload:Dynamic
+	name:String,
+    slots:Slots
 }
 
-typedef ConnectionPayload =
+typedef AlexaRequest =
 {
-	port:Int,
-	ipAddress:String
+	type:String,
+    requestId:String,
+    timestamp:String,
+    intent:Intent,
+    locale:String
 }
 
-typedef EchoPayload =
+typedef AlexaSession =
 {
-	index:Int,
-	data:String
+	sessionId:String,
+	application:Application,
+	attributes:Dynamic,
+	user:User
 }
 
-typedef DevicePayload =
+typedef Application =
 {
-	index:Int,
-	data:String
+	applicationId:String	
+}
+
+typedef User =
+{
+	userId:String	
+}
+
+typedef Slot =
+{
+	name:String,
+	value:String
+}
+
+typedef Slots =
+{
+	?Video:Slot,
+	?ShowName:Slot
 }

@@ -1,4 +1,4 @@
-package alexa.payload.response.response.outputSpeech;
+package alexa.payloads.response.response.outputSpeech;
 
 /**
  * ...

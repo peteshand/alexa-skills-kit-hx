@@ -1,5 +1,6 @@
-package alexa.payload.response.response.reprompt;
-import alexa.payload.response.response.outputSpeech.OutputSpeech;
+package alexa.payloads.response.response.reprompt;
+
+import alexa.payloads.response.response.outputSpeech.OutputSpeech;
 
 /**
  * ...

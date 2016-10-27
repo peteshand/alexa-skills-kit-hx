@@ -4,7 +4,7 @@
 	"license": "BSD",
 	"tags": [ "amazon", "alexa", "node", "web" ],
 	"description": "Library that interfaces with Amazon Alexa cloud service",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"releasenote": "initial commit",
 	"contributors": [ "p.j.shand" ],
 	"dependencies": {

@@ -1,8 +1,8 @@
 package alexa.process;
+import alexa.payloads.Payloads.IncomingPayload;
 import alexa.process.IProcess;
 import alexa.responses.UnknownIntentResponse;
 import alexa.tasks.Task;
-import alexa.payload.incoming.IncomingPayload;
 import haxe.Json;
 
 /**

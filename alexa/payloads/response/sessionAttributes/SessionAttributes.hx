@@ -1,4 +1,4 @@
-package alexa.payload.response.sessionAttributes;
+package alexa.payloads.response.sessionAttributes;
 
 /**
  * ...

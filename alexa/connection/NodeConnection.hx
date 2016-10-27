@@ -1,24 +1,26 @@
-package alexa.amazon;
-import alexa.actions.Actions;
+package alexa.connection;
+
 import js.node.Buffer;
-import js.node.Fs;
 import js.node.Https;
 import js.node.Tls.TlsCreateServerOptions;
-import js.node.events.EventEmitter;
 import js.node.http.IncomingMessage;
 import js.node.http.ServerResponse;
 import js.node.https.Server;
+
 import alexa.tasks.Task;
 
 /**
  * ...
  * @author P.J.Shand
  */
-class AmazonConnection
+class NodeConnection implements IConnection
 {
-	public var eventEmitter = new EventEmitter();
+	var callback:Task-> Void;
 	
-	public function new() { }
+	public function new(callback:Task -> Void)
+	{
+		this.callback = callback;
+	}
 	
 	public function connect(key:Buffer, cert:Buffer) 
 	{
@@ -31,7 +33,7 @@ class AmazonConnection
 		server.listen(443, "0.0.0.0", function () {
 			trace('Started!');
 		});
-        trace('Node Server running at https://0.0.0.0:443/');
+        trace('Alexa Node Server running at https://0.0.0.0:443/');
 	}
 	
 	private function OnRequest(request:IncomingMessage, response:ServerResponse) 
@@ -41,8 +43,7 @@ class AmazonConnection
 			request.on('data', function (data:String) {
 				jsonString += data;
 				trace("jsonString = " + jsonString);
-				var task:Task = new Task(jsonString, request, response);
-				eventEmitter.emit(Actions.ECHO_MESSAGE, task);
+				callback(new Task(jsonString, request, response));
 			});
 		}
 	}
