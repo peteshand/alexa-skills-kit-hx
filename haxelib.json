@@ -5,7 +5,7 @@
 	"tags": [ "amazon", "alexa", "node", "web" ],
 	"description": "Library that interfaces with Amazon Alexa cloud service",
 	"version": "0.0.2",
-	"releasenote": "initial commit",
+	"releasenote": "restructure classes and add hello world sample",
 	"contributors": [ "p.j.shand" ],
 	"dependencies": {
 		
